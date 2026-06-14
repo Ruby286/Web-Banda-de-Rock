@@ -28,22 +28,22 @@ const concerts = [
     date: "5 Sep 2026",
     venue: "Sala Independance",
     city: "Madrid",
-    time: "22:00h",
-    ticketUrl: "#"
+    time: "",
+    ticketUrl: ""
   },
   {
     date: "12 Sep 2026",
     venue: "Mejorada del Campo",
     city: "Cuenca de Henares",
-    time: "21:30h",
-    ticketUrl: "#"
+    time: "",
+    ticketUrl: ""
   },
   {
     date: "25 Sep 2026",
     venue: "Monkey Rock",
     city: "San Sebastián de los Reyes",
-    time: "22:30h",
-    ticketUrl: "#"
+    time: "",
+    ticketUrl: ""
   },
   {
     date: "17 Oct 2026",
@@ -217,7 +217,7 @@ const translations = {
     "about.eyebrow":        "Quiénes somos",
     "about.title":          "La Banda",
     "about.text":           "Fitosfera se crea en 2024 como grupo tributo a Fito&Fitipaldis con músicos residentes en distintas localidades de la Comunidad de Madrid.",
-    "about.text2":          "Llevamos la energía de los bares de toda la vida, el rock de carretera y el alma del barrio a cada concierto. Cada actuación es una celebración del mejor rock urbano español.",
+    "about.text2":          "Llevamos la energía de los bares de toda la vida, el rock de carretera y el alma del barrio a cada concierto. Digamos que nos gusta empezar la casa por el tejado",
     "about.btn":            "Ver conciertos",
     "about.badge":          "Tributo",
     "members.eyebrow":      "Los de siempre",
@@ -229,7 +229,7 @@ const translations = {
     "videos.placeholder":   "Próximamente",
     "contact.eyebrow":      "Reserva tu fecha",
     "contact.title":        "Contratación",
-    "contact.desc":         "¿Quieres que Fitosfera toque en tu sala, festival o evento privado? Escríbenos y te respondemos en 24h.",
+    "contact.desc":         "¿Quieres que Fitosfera toque en tu sala, festival o evento privado? Escríbenos y te respondemos.",
     "form.name":            "Nombre",
     "form.email":           "Email",
     "form.phone":           "Teléfono (opcional)",
