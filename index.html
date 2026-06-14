@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Fitosfera – Tributo a Fito & Fitipaldis</title>
+  <meta name="description" content="Fitosfera, la banda tributo a Fito & Fitipaldis. Rock urbano español con toda la energía del directo. Reserva tu concierto en la Comunidad de Madrid." />
+  <meta name="keywords" content="Fitosfera, tributo Fito Fitipaldis, banda tributo, rock español, conciertos Madrid" />
+  <meta name="author" content="Fitosfera" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fitosfera – Tributo a Fito & Fitipaldis" />
+  <meta property="og:description" content="Rock urbano español con toda la energía del directo. Reserva tu concierto." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fitosfera.es" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fitosfera – Tributo a Fito & Fitipaldis" />
+  <meta name="twitter:description" content="Rock urbano español. La energía de Fito en directo." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo" aria-label="Fitosfera inicio">
+        <span class="logo-main">Fitosfera</span>
+        <span class="logo-sub" data-i18n="nav.tribute">Tributo a Fito &amp; Fitipaldis</span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#conciertos" data-i18n="nav.concerts">Conciertos</a></li>
+          <li><a href="#banda" data-i18n="nav.about">La Banda</a></li>
+          <li><a href="#integrantes" data-i18n="nav.members">Integrantes</a></li>
+          <li><a href="#galeria" data-i18n="nav.gallery">Galería</a></li>
+          <li><a href="#videos" data-i18n="nav.videos">Vídeos</a></li>
+          <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <!-- Language toggle -->
+        <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Change language">
+          <span class="lang-flag">🇪🇸</span>
+          <span class="lang-label" id="langLabel">EN</span>
+        </button>
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio" role="banner">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Tributo a</p>
+      <h1 class="hero-title">
+        <span class="hero-title-main">Fitosfera</span>
+      </h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Fito &amp; Fitipaldis</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">La carretera. El bar. La guitarra. El directo.</p>
+      <div class="hero-buttons">
+        <a href="#conciertos" class="btn btn-primary" data-i18n="hero.btn.concerts">Próximos Conciertos</a>
+        <a href="#contacto" class="btn btn-ghost" data-i18n="hero.btn.contact">Contratación</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===== CONCIERTOS ===== -->
+  <!--
+    ══════════════════════════════════════════════════════════════
+    CÓMO AÑADIR O ELIMINAR CONCIERTOS:
+    Edita el array `concerts` en script.js (inicio del archivo).
+    Cada objeto tiene: { date, venue, city, time, ticketUrl }
+    Ejemplo:
+      { date: "15 Nov 2026", venue: "Sala Caracol", city: "Madrid",
+        time: "22:00h", ticketUrl: "#" }
+    ══════════════════════════════════════════════════════════════
+  -->
+  <section class="section concerts-section" id="conciertos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="concerts.eyebrow">En directo</span>
+        <h2 class="section-title" data-i18n="concerts.title">Próximos Conciertos</h2>
+        <div class="title-scratch" aria-hidden="true"></div>
+      </div>
+      <!-- Las tarjetas se generan automáticamente con JS -->
+      <div class="concerts-grid" id="concertsGrid" role="list"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE LA BANDA ===== -->
+  <section class="section about-section" id="banda">
+    <div class="about-bg-texture" aria-hidden="true"></div>
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text reveal">
+          <span class="section-eyebrow" data-i18n="about.eyebrow">Quiénes somos</span>
+          <h2 class="section-title" data-i18n="about.title">La Banda</h2>
+          <div class="title-scratch" aria-hidden="true"></div>
+          <p class="about-body" data-i18n="about.text">
+            Fitosfera se crea en 2024 como grupo tributo a Fito&amp;Fitipaldis con músicos residentes en distintas localidades de la Comunidad de Madrid.
+          </p>
+          <p class="about-body" data-i18n="about.text2">
+            Llevamos la energía de los bares de toda la vida, el rock de carretera y el alma del barrio a cada concierto. Digamos que nos gusta comenzar "la casa por el tejado".
+          </p>
+          <a href="#conciertos" class="btn btn-primary" data-i18n="about.btn">Ver conciertos</a>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-image-frame">
+            <!-- Sustituye esta URL por una foto real de la banda -->
+            <img
+              src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80"
+              alt="Fitosfera en directo"
+              loading="lazy"
+            />
+            <div class="about-image-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="about-badge" aria-hidden="true">
+            <span class="badge-year">2024</span>
+            <span class="badge-label" data-i18n="about.badge">Tributo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTEGRANTES ===== -->
+  <!--
+    ══════════════════════════════════════════════════════════════
+    CÓMO AÑADIR O EDITAR MÚSICOS:
+    Edita el array `members` en script.js.
+    Cada objeto tiene: { name, instrument, description, photo }
+    Para la foto: sustituye la URL del placeholder por la foto real.
+    ══════════════════════════════════════════════════════════════
+  -->
+  <section class="section members-section" id="integrantes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="members.eyebrow">Los de siempre</span>
+        <h2 class="section-title" data-i18n="members.title">La Familia</h2>
+        <div class="title-scratch" aria-hidden="true"></div>
+      </div>
+      <!-- Las tarjetas se generan automáticamente con JS -->
+      <div class="members-grid" id="membersGrid" role="list"></div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <!--
+    ══════════════════════════════════════════════════════════════
+    CÓMO CAMBIAR IMÁGENES DE LA GALERÍA:
+    Edita el array `galleryImages` en script.js.
+    Cada objeto tiene: { src, alt, caption }
+    ══════════════════════════════════════════════════════════════
+  -->
+  <section class="section gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="gallery.eyebrow">Momentos</span>
+        <h2 class="section-title" data-i18n="gallery.title">Galería</h2>
+        <div class="title-scratch" aria-hidden="true"></div>
+      </div>
+      <div class="gallery-grid" id="galleryGrid" role="list"></div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Siguiente">&#8250;</button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" id="lightboxImg" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ===== VÍDEOS ===== -->
+  <!--
+    ══════════════════════════════════════════════════════════════
+    CÓMO AÑADIR VÍDEOS DE YOUTUBE:
+    Edita el array `videos` en script.js.
+    Cada objeto tiene: { embedId, title }
+    embedId es la parte final de la URL de YouTube:
+      https://www.youtube.com/watch?v=ESTE_ES_EL_ID
+    ══════════════════════════════════════════════════════════════
+  -->
+  <section class="section videos-section" id="videos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="videos.eyebrow">Escúchanos</span>
+        <h2 class="section-title" data-i18n="videos.title">Vídeos</h2>
+        <div class="title-scratch" aria-hidden="true"></div>
+      </div>
+      <div class="videos-grid" id="videosGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-info reveal">
+          <span class="section-eyebrow" data-i18n="contact.eyebrow">Reserva tu fecha</span>
+          <h2 class="section-title" data-i18n="contact.title">Contratación</h2>
+          <div class="title-scratch" aria-hidden="true"></div>
+          <p class="contact-desc" data-i18n="contact.desc">
+            ¿Quieres que Fitosfera toque en tu sala, festival o evento privado? Escríbenos y te respondemos en 24h.
+          </p>
+          <ul class="contact-details" role="list">
+            <li>
+              <span class="contact-icon" aria-hidden="true">📞</span>
+              <!-- Sustituye por el teléfono real -->
+              <a href="tel:+34600000000" class="contact-link">+34 600 000 000</a>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <!-- Sustituye por el email real -->
+              <a href="mailto:contratacion@fitosfera.es" class="contact-link">contratacion@fitosfera.es</a>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">📍</span>
+              <span>Comunidad de Madrid, España</span>
+            </li>
+          </ul>
+          <div class="social-links" role="list" aria-label="Redes sociales">
+            <!-- Sustituye # por las URLs reales -->
+            <a href="#" class="social-btn" aria-label="Instagram" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="TikTok" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName" data-i18n="form.name">Nombre</label>
+              <input type="text" id="contactName" name="name" autocomplete="name" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail" data-i18n="form.email">Email</label>
+              <input type="email" id="contactEmail" name="email" autocomplete="email" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="contactPhone" data-i18n="form.phone">Teléfono (opcional)</label>
+              <input type="tel" id="contactPhone" name="phone" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage" data-i18n="form.message">Mensaje</label>
+              <textarea id="contactMessage" name="message" rows="5" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" data-i18n="form.submit">Enviar mensaje</button>
+            <p class="form-success" id="formSuccess" role="alert" aria-live="polite" data-i18n="form.success">
+              ¡Mensaje enviado! Te respondemos en breve.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-noise" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Fitosfera</span>
+          <p class="footer-tagline" data-i18n="footer.tagline">Tributo a Fito &amp; Fitipaldis</p>
+          <p class="footer-location">📍 Comunidad de Madrid</p>
+        </div>
+        <nav class="footer-links" aria-label="Navegación del pie">
+          <h3 data-i18n="footer.links">Enlaces</h3>
+          <ul>
+            <li><a href="#conciertos" data-i18n="nav.concerts">Conciertos</a></li>
+            <li><a href="#banda" data-i18n="nav.about">La Banda</a></li>
+            <li><a href="#integrantes" data-i18n="nav.members">Integrantes</a></li>
+            <li><a href="#galeria" data-i18n="nav.gallery">Galería</a></li>
+            <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="footer-social">
+          <h3 data-i18n="footer.follow">Síguenos</h3>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2025 Fitosfera. Todos los derechos reservados.</p>
+        <p class="footer-disclaimer" data-i18n="footer.disclaimer">Banda tributo independiente. No afiliada oficialmente a Fito &amp; Fitipaldis.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
