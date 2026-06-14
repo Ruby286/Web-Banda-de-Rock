@@ -229,16 +229,8 @@ const translations = {
     "videos.placeholder":   "Próximamente",
     "contact.eyebrow":      "Reserva tu fecha",
     "contact.title":        "Contratación",
-    "contact.desc":         "¿Quieres que Fitosfera toque en tu sala, festival o evento privado? Escríbenos y te respondemos.",
-    "form.name":            "Nombre",
-    "form.email":           "Email",
-    "form.phone":           "Teléfono (opcional)",
-    "form.message":         "Mensaje",
-    "form.submit":          "Enviar mensaje",
-    "form.success":         "¡Mensaje enviado! Te respondemos en breve.",
-    "footer.tagline":       "Tributo a Fito & Fitipaldis",
+    "contact.desc":         "¿Quieres que Fitosfera toque en tu sala, festival o evento privado? <br> Contactanos y hagamos que suene",
     "footer.links":         "Enlaces",
-    "footer.follow":        "Síguenos",
     "footer.copyright":     "© 2025 Fitosfera. Todos los derechos reservados.",
     "footer.disclaimer":    "Banda tributo independiente. No afiliada oficialmente a Fito & Fitipaldis."
   },
@@ -262,7 +254,7 @@ const translations = {
     "about.eyebrow":        "Who we are",
     "about.title":          "The Band",
     "about.text":           "Fitosfera was founded in 2024 as a tribute band to Fito&Fitipaldis, formed by musicians from different towns in the Community of Madrid.",
-    "about.text2":          "We bring the energy of the classic local bars, road rock and neighbourhood soul to every show. Each performance is a celebration of the best Spanish urban rock.",
+    "about.text2":          "We bring the energy of the classic local bars, road rock and neighbourhood soul to every show. Let's just say we like to start with `la casa por el tejado´",
     "about.btn":            "See concerts",
     "about.badge":          "Tribute",
     "members.eyebrow":      "The crew",
@@ -274,16 +266,8 @@ const translations = {
     "videos.placeholder":   "Coming soon",
     "contact.eyebrow":      "Book your date",
     "contact.title":        "Booking",
-    "contact.desc":         "Want Fitosfera to play at your venue, festival or private event? Write to us and we'll reply within 24h.",
-    "form.name":            "Name",
-    "form.email":           "Email",
-    "form.phone":           "Phone (optional)",
-    "form.message":         "Message",
-    "form.submit":          "Send message",
-    "form.success":         "Message sent! We'll be in touch soon.",
-    "footer.tagline":       "Fito & Fitipaldis Tribute",
+    "contact.desc":         "Want Fitosfera to play at your venue, festival or private event? <br> Contact us and make some noise",
     "footer.links":         "Links",
-    "footer.follow":        "Follow us",
     "footer.copyright":     "© 2025 Fitosfera. All rights reserved.",
     "footer.disclaimer":    "Independent tribute band. Not officially affiliated with Fito & Fitipaldis."
   }
@@ -329,7 +313,7 @@ function buildConcerts() {
       <div class="concert-date">${c.date}</div>
       <div>
         <div class="concert-venue">${c.venue}</div>
-        <div class="concert-city">📍 ${c.city}</div>
+        <div class="concert-city"><i class="fa-solid fa-location-dot"></i> ${c.city}</div>
       </div>
       <div class="concert-meta">
         ${timeHTML}
