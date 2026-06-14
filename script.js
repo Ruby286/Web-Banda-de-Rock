@@ -229,7 +229,7 @@ const translations = {
     "videos.placeholder":   "Próximamente",
     "contact.eyebrow":      "Reserva tu fecha",
     "contact.title":        "Contratación",
-    "contact.desc":         "¿Quieres que Fitosfera toque en tu sala, festival o evento privado? <br> Contactanos y hagamos que suene",
+    "contact.desc":         "¿Quieres que Fitosfera toque en tu sala, festival o evento privado? <br> Contáctanos y hagamos que suene",
     "footer.links":         "Enlaces",
     "footer.copyright":     "© 2025 Fitosfera. Todos los derechos reservados.",
     "footer.disclaimer":    "Banda tributo independiente. No afiliada oficialmente a Fito & Fitipaldis."
