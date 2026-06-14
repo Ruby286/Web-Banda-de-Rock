@@ -441,8 +441,8 @@ function initLang() {
 
   document.getElementById('langToggle').addEventListener('click', () => {
     currentLang = currentLang === 'es' ? 'en' : 'es';
-    document.getElementById('langLabel').textContent = currentLang === 'es' ? 'EN' : 'ES';
-    document.querySelector('.lang-flag').textContent = currentLang === 'es' ? '🇪🇸' : '🇬🇧';
+    document.getElementById('langActive').textContent = currentLang === 'es' ? 'EN' : 'ES';
+    document.getElementById('langOther').textContent  = currentLang === 'es' ? 'ES' : 'EN';
     document.documentElement.lang = currentLang;
     applyTranslations();
     // Rebuild dynamic sections to pick up translated strings
