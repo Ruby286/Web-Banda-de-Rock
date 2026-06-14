@@ -69,41 +69,41 @@ const concerts = [
 ══════════════════════════════════════════════════════════════ */
 const members = [
   {
-    name: "[NOMBRE_MÚSICO]",
+    name: "Rafa Peñalva",
     instrument: "Voz",
     description: "Descripción del vocalista de la banda. Sustituye este texto por la bio real del músico.",
     // Sustituye esta URL por la foto real del músico
-    photo: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&q=80"
+    photo: "images/rafa.jpeg"
   },
   {
-    name: "[NOMBRE_MÚSICO]",
-    instrument: "Guitarra",
+    name: "Pablo San Martín",
+    instrument: "Guitarra / Coros",
     description: "Descripción del guitarrista de la banda. Sustituye este texto por la bio real del músico.",
-    photo: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop&q=80"
+    photo: "images/pablo.jpeg"
   },
   {
-    name: "[NOMBRE_MÚSICO]",
-    instrument: "Guitarra",
+    name: "José M. Matos",
+    instrument: "Guitarra / coros",
     description: "Descripción del segundo guitarrista. Sustituye este texto por la bio real del músico.",
-    photo: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=400&fit=crop&q=80"
+    photo: "images/jose.jpeg"
   },
   {
-    name: "[NOMBRE_MÚSICO]",
+    name: "Ricardo Acosta",
     instrument: "Bajo",
     description: "Descripción del bajista de la banda. Sustituye este texto por la bio real del músico.",
-    photo: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop&q=80"
+    photo: "images/ricardo.jpeg"
   },
   {
-    name: "[NOMBRE_MÚSICO]",
+    name: "Jesús Fco. Matos",
     instrument: "Batería",
     description: "Descripción del batería de la banda. Sustituye este texto por la bio real del músico.",
-    photo: "https://images.unsplash.com/photo-1543965170-e399ce9eb5b9?w=400&h=400&fit=crop&q=80"
+    photo: "images/jesus.jpeg"
   },
   {
-    name: "[NOMBRE_MÚSICO]",
-    instrument: "Teclados / Coros",
+    name: "Antonio J. Cruz",
+    instrument: "Teclado / Saxofón / Percusión / Coros",
     description: "Descripción del teclista de la banda. Sustituye este texto por la bio real del músico.",
-    photo: "https://images.unsplash.com/photo-1520927584672-58f5d3d34f29?w=400&h=400&fit=crop&q=80"
+    photo: "images/antonio.jpeg"
   }
 ];
 
