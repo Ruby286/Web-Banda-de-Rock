@@ -26,31 +26,35 @@
 const concerts = [
   {
     date: "5 Sep 2026",
-    venue: "Sala Independance",
+    venue: "Sala Independance, Madrid",
     city: "Madrid",
-    time: "",
-    ticketUrl: ""
+    time: "20:30h",
+    ticketUrl: "",
+    venueUrl: "https://independanceclub.com/"
   },
   {
     date: "12 Sep 2026",
-    venue: "Mejorada del Campo",
-    city: "Cuenca de Henares",
-    time: "",
-    ticketUrl: ""
+    venue: "Conciertos club, Madrid",
+    city: "Mejorada del Campo, Madrid",
+    time: "14:00h",
+    ticketUrl: "",
+    venueUrl: "https://conciertos.club/madrid/locales/el-establo-acwv-asociacion-cultural-western-vagon"
   },
   {
     date: "25 Sep 2026",
     venue: "Monkey Rock",
-    city: "San Sebastián de los Reyes",
-    time: "",
-    ticketUrl: ""
+    city: "San Sebastián de los Reyes, Madrid",
+    time: "22:00h",
+    ticketUrl: "",
+    venueUrl: "https://www.instagram.com/monkeyrock_sanse/?hl=es"
   },
   {
     date: "17 Oct 2026",
-    venue: "One Beer",
-    city: "Por confirmar",
-    time: "",
-    ticketUrl: ""
+    venue: "The One Beer",
+    city: "Getafe, Madrid",
+    time: "13:30h",
+    ticketUrl: "",
+    venueUrl: "https://www.onebeer.es/conciertos/"
   }
 ];
 
@@ -70,39 +74,39 @@ const concerts = [
 const members = [
   {
     name: "Rafa Peñalva",
-    instrument: "Voz",
-    description: "Descripción del vocalista de la banda. Sustituye este texto por la bio real del músico.",
+    instrument: { es: "Voz", en: "Vocals" },
+    description: { es: "Voz", en: "Vocals" },
     // Sustituye esta URL por la foto real del músico
     photo: "images/rafa.jpeg"
   },
   {
     name: "Pablo San Martín",
-    instrument: "Guitarra / Coros",
-    description: "Descripción del guitarrista de la banda. Sustituye este texto por la bio real del músico.",
+    instrument: { es: "Guitarra", en: "Guitar" },
+    description: { es: "Guitarra", en: "Guitar" },
     photo: "images/pablo.jpeg"
   },
   {
     name: "José M. Matos",
-    instrument: "Guitarra / coros",
-    description: "Descripción del segundo guitarrista. Sustituye este texto por la bio real del músico.",
+    instrument: { es: "Guitarra / coros", en: "Guitar / Backing vocals" },
+    description: { es: "Guitarra / coros", en: "Guitar / Backing vocals" },
     photo: "images/jose.jpeg"
   },
   {
     name: "Ricardo Acosta",
-    instrument: "Bajo",
-    description: "Descripción del bajista de la banda. Sustituye este texto por la bio real del músico.",
+    instrument: { es: "Bajista", en: "Bassist" },
+    description: { es: "Bajista", en: "Bassist" },
     photo: "images/ricardo.jpeg"
   },
   {
     name: "Jesús Fco. Matos",
-    instrument: "Batería",
-    description: "Descripción del batería de la banda. Sustituye este texto por la bio real del músico.",
+    instrument: { es: "Batería", en: "Drummer" },
+    description: { es: "Batería", en: "Drummer" },
     photo: "images/jesus.jpeg"
   },
   {
     name: "Antonio J. Cruz",
-    instrument: "Teclado / Saxofón / Percusión / Coros",
-    description: "Descripción del teclista de la banda. Sustituye este texto por la bio real del músico.",
+    instrument: { es: "Saxofonista / Teclista / Coros / Percusionista", en: "Saxophonist / Keyboardist / Backing vocals / Percusionist" },
+    description: { es: "Saxofonista / Teclista / Coros / Percusionista", en: "Saxophonist / Keyboardist / Backing vocals / Percusionist" },
     photo: "images/antonio.jpeg"
   }
 ];
@@ -120,44 +124,44 @@ const members = [
 ══════════════════════════════════════════════════════════════ */
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&q=80",
+    src: "images/escenario8.jpeg",
     alt: "Concierto Fitosfera",
-    caption: "En directo — Madrid 2024"
+    caption: { es: "En directo", en: "Live show" }
   },
   {
-    src: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
+    src: "images/pro.jpeg",
     alt: "Escenario iluminado",
-    caption: "La magia del directo"
+    caption: { es: "En directo", en: "Live show" }
   },
   {
-    src: "https://images.unsplash.com/photo-1501612780327-45045538702b?w=800&q=80",
+    src: "images/familia.jpeg",
     alt: "Guitarrista en acción",
-    caption: "Rock & roll puro"
+    caption: { es: "En directo", en: "Live show" }
   },
   {
-    src: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&q=80",
+    src: "images/escenario9.jpeg",
     alt: "Batería en concierto",
-    caption: "Al ritmo de la carretera"
+    caption: { es: "En directo", en: "Live show" }
   },
   {
-    src: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800&q=80",
+    src: "images/voz.jpeg",
     alt: "Público en concierto",
-    caption: "El público lo es todo"
+    caption: { es: "En directo", en: "Live show" }
   },
   {
-    src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
+    src: "images/grupo.jpeg",
     alt: "Vocalista Fitosfera",
-    caption: "Voz y alma de la banda"
+    caption: { es: "Post-concierto", en: "Post-concert" }
   },
   {
-    src: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800&q=80",
+    src: "images/grupo2.jpeg",
     alt: "Ensayo de la banda",
-    caption: "Preparando el próximo show"
+    caption: { es: "Pre-concierto", en: "Pre-concert" }
   },
   {
-    src: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=800&q=80",
+    src: "images/escenario1.jpeg",
     alt: "Backstage",
-    caption: "Entre bastidores"
+    caption: { es: "Sala Sojo 3.14, Tres Cantos", en: "Concert hall Sojo 3.14, Tres Cantos"}
   }
 ];
 
@@ -175,16 +179,16 @@ const galleryImages = [
 ══════════════════════════════════════════════════════════════ */
 const videos = [
   {
-    embedId: "",    // Sustituye por: "dQw4w9WgXcQ" (ejemplo de ID de YouTube)
-    title: "Fitosfera en directo – [Nombre del vídeo]"
+    embedId: "NXr6kaXfKLw",    // Sustituye por: "dQw4w9WgXcQ" (ejemplo de ID de YouTube)
+    title: "Fitosfera - Tributo a Fito y Fitipaldis | Medalla de cartón"
   },
   {
-    embedId: "",
-    title: "Fitosfera en directo – [Nombre del vídeo]"
+    embedId: "zS22HbO8Z6c",
+    title: "Fitosfera - Tributo a Fito & Fitipaldis | Cielo hermético"
   },
   {
-    embedId: "",
-    title: "Fitosfera en directo – [Nombre del vídeo]"
+    embedId: "rMZfShweCB4",
+    title: "Fitosfera - Tributo a Fito y Fitipaldis | Un buen castigo"
   }
 ];
 
@@ -216,8 +220,8 @@ const translations = {
     "concerts.tbd":         "Hora por confirmar",
     "about.eyebrow":        "Quiénes somos",
     "about.title":          "La Banda",
-    "about.text":           "Fitosfera se crea en 2024 como grupo tributo a Fito&Fitipaldis con músicos residentes en distintas localidades de la Comunidad de Madrid.",
-    "about.text2":          "Llevamos la energía de los bares de toda la vida, el rock de carretera y el alma del barrio a cada concierto. Digamos que nos gusta empezar la casa por el tejado",
+    "about.text":           "Fitosfera es una banda tributo a Fito & Fitipaldis formada por seis músicos con amplia experiencia en directo. Su espectáculo recrea con fidelidad la esencia, energía y sonido de la banda original, recorriendo todas las etapas de su carrera y sus canciones más conocidas. Con una formación completa y un directo potente, cercano y participativo, Fitosfera ofrece actuaciones adaptadas a salas, festivales y eventos de cualquier formato. Rock en castellano, grandes himnos y un show profesional que conecta con el público desde el primer minuto.",
+    "about.text2":          "Digamos que nos gusta empezar la casa por el tejado.",
     "about.btn":            "Ver conciertos",
     "about.badge":          "Tributo",
     "members.eyebrow":      "Los de siempre",
@@ -253,8 +257,8 @@ const translations = {
     "concerts.tbd":         "Time to be confirmed",
     "about.eyebrow":        "Who we are",
     "about.title":          "The Band",
-    "about.text":           "Fitosfera was founded in 2024 as a tribute band to Fito&Fitipaldis, formed by musicians from different towns in the Community of Madrid.",
-    "about.text2":          "We bring the energy of the classic local bars, road rock and neighbourhood soul to every show. Let's just say we like to start with `la casa por el tejado´",
+    "about.text":           "Fitosfera is a Fito & Fitipaldis tribute band made up of six highly experienced live musicians. Their show faithfully captures the essence, energy, and sound of the original band, covering every stage of their career and performing their most iconic songs. With a full lineup and a powerful, engaging, and audience-focused performance, Fitosfera delivers shows tailored to venues, festivals, and events of any size. Spanish rock, timeless anthems, and a professional live experience that connects with audiences from the very first song.",
+    "about.text2":          "Let's just say we like to start with `la casa por el tejado´",
     "about.btn":            "See concerts",
     "about.badge":          "Tribute",
     "members.eyebrow":      "The crew",
@@ -288,7 +292,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initLightbox();
   initScrollReveal();
-  initContactForm();
 });
 
 /* ── BUILD: CONCERTS ─────────────────────────────────────────── */
@@ -302,7 +305,7 @@ function buildConcerts() {
       ? `<a href="${c.ticketUrl}" class="concert-ticket" data-i18n="concerts.tickets" target="_blank" rel="noopener noreferrer">${t('concerts.tickets')}</a>`
       : '';
     const timeHTML = c.time
-      ? `<span class="concert-time">🕙 ${c.time}</span>`
+      ? `<span class="concert-time"><i class="fa-solid fa-clock"></i> ${c.time}</span>`
       : `<span class="concert-tbd">${t('concerts.tbd')}</span>`;
 
     const card = document.createElement('article');
@@ -312,7 +315,7 @@ function buildConcerts() {
     card.innerHTML = `
       <div class="concert-date">${c.date}</div>
       <div>
-        <div class="concert-venue">${c.venue}</div>
+        <div class="concert-venue">${c.venueUrl? `<a href="${c.venueUrl}" target="_blank" rel="noopener noreferrer">${c.venue}</a>`: c.venue} </div>
         <div class="concert-city"><i class="fa-solid fa-location-dot"></i> ${c.city}</div>
       </div>
       <div class="concert-meta">
@@ -339,9 +342,9 @@ function buildMembers() {
         <img src="${m.photo}" alt="Foto de ${m.name}" loading="lazy" />
       </div>
       <div class="member-info">
-        <div class="member-instrument">${m.instrument}</div>
+        <div class="member-instrument">${m.instrument[currentLang]}</div>
         <h3 class="member-name">${m.name}</h3>
-        <p class="member-desc">${m.description}</p>
+        <p class="member-desc">${m.description[currentLang]}</p>
       </div>
     `;
     grid.appendChild(card);
@@ -359,7 +362,7 @@ function buildGallery() {
     item.className = 'gallery-item reveal';
     item.setAttribute('role', 'listitem');
     item.setAttribute('tabindex', '0');
-    item.setAttribute('aria-label', img.caption);
+    item.setAttribute('aria-label', img.caption[currentLang]);
     item.dataset.index = i;
     item.innerHTML = `
       <img src="${img.src}" alt="${img.alt}" loading="lazy" />
@@ -432,6 +435,8 @@ function initLang() {
     // Rebuild dynamic sections to pick up translated strings
     buildConcerts();
     buildVideos();
+    buildMembers();
+    buildGallery();
     initScrollReveal(); // Re-observe new elements
   });
 }
@@ -509,7 +514,7 @@ function initLightbox() {
     const img = galleryImages[lightboxIndex];
     lbImg.src = img.src;
     lbImg.alt = img.alt;
-    lbCap.textContent = img.caption;
+    lbCap.textContent = img.caption[currentLang];
   }
 
   lbClose.addEventListener('click', closeLightbox);
@@ -566,31 +571,5 @@ function initScrollReveal() {
 
   items.forEach(el => {
     if (!el.classList.contains('visible')) observer.observe(el);
-  });
-}
-
-/* ══════════════════════════════════════════════════════════════
-   CONTACT FORM
-══════════════════════════════════════════════════════════════ */
-function initContactForm() {
-  const form    = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
-  if (!form) return;
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    // Aquí puedes conectar con un servicio real (Formspree, Netlify, EmailJS…)
-    // Por ahora muestra el mensaje de éxito visualmente.
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = '…';
-
-    setTimeout(() => {
-      success.classList.add('visible');
-      form.reset();
-      btn.disabled = false;
-      btn.textContent = t('form.submit');
-      setTimeout(() => success.classList.remove('visible'), 5000);
-    }, 800);
   });
 }
